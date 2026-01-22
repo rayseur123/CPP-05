@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 12:32:32 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/20 16:00:32 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/20 17:10:11 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,11 @@ const char* AForm::GradeTooHighException::what() const throw()
 const char* AForm::GradeTooLowException::what() const throw()
 {
 	return (GRADE_TOO_LOW);
+}
+
+const char* AForm::NotSignedException::what() const throw()
+{
+	return (NOT_SIGNED);
 }
 
 std::ostream&	operator<<(std::ostream& os, AForm const& form)

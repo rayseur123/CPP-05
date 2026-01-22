@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:00:11 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/20 14:17:36 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/22 10:04:58 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ class	Bureaucrat
 		int const&			getGrade() const;
 		
 		void				signForm(AForm& form) const;
+		void				executeForm(AForm const& form) const;
 		
 		class	GradeTooHighException : public std::exception
 		{
@@ -52,6 +53,7 @@ class	Bureaucrat
 		{
 			const char* what() const throw();
 		};
+		
 };
 
 std::ostream&	operator<<(std::ostream& os, Bureaucrat const& Bureaucrat);

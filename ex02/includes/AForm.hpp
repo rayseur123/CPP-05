@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 12:01:11 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/20 16:05:39 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/20 17:10:29 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 #define GRADE_TOO_HIGHT "The grade is too hight"
 #define GRADE_TOO_LOW "The grade is too low"
+#define NOT_SIGNED "The form are not signed"
 
 class	Bureaucrat;
 
@@ -52,6 +53,11 @@ class	AForm
 		};
 
 		class	GradeTooLowException : public std::exception
+		{
+			const char* what() const throw();
+		};
+		
+		class	NotSignedException : public std::exception
 		{
 			const char* what() const throw();
 		};

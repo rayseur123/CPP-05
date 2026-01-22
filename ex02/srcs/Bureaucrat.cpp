@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:13:36 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/20 14:20:18 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/22 10:07:53 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,21 @@ void	Bureaucrat::signForm(AForm& form) const
 		return ;
 	}
 	std::cout << name_ << " signed " << form.getName() << std::endl;
+}
+
+void	Bureaucrat::executeForm(AForm const& form) const
+{
+	try
+	{
+		form.execute(*this);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+		return ;
+	}
+	std::cout << name_ << " executed " << form.getName() << std::endl;
+	
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
