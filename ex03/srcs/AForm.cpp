@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 12:32:32 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/22 11:18:59 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/23 16:12:23 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,11 @@ bool const&	AForm::getIsSigned() const
 	return (isSigned_);
 }
 
+void	AForm::setIsSigned(bool const& isSigned)
+{
+	isSigned_ = isSigned;
+}
+
 int const&	AForm::getSignRequiredGrade() const
 {
 	return (signRequiredGrade_);
@@ -71,6 +76,16 @@ int const&	AForm::getSignRequiredGrade() const
 int const&	AForm::getExecRequiredGrade() const
 {
 	return (execRequiredGrade_);
+}
+
+std::string const&	AForm::getTarget() const
+{
+	return (target_);
+}
+
+void	AForm::setTarget(std::string const& target)
+{
+	target_ = target;
 }
 
 void	AForm::beSigned(Bureaucrat const& bureaucrat)

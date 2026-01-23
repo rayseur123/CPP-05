@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 12:01:11 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/20 17:10:29 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/23 16:03:34 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class	Bureaucrat;
 
 class	AForm
 {
-	protected:
+	private:
 		std::string const	name_;
 		bool				isSigned_;
 		int const			signRequiredGrade_;
@@ -40,10 +40,16 @@ class	AForm
 		AForm const&	operator=(AForm const& form);
 
 		std::string const&	getName() const;
+		
 		bool const&			getIsSigned() const;
+		void				setIsSigned(bool const& isSigned);
+
 		int const&			getSignRequiredGrade() const;
 		int const&			getExecRequiredGrade() const;
-
+		
+		std::string const&	getTarget() const;
+		void				setTarget(std::string const& target);
+		
 		void				beSigned(Bureaucrat const& bureaucrat);
 		virtual void		execute(Bureaucrat const& executor) const = 0;
 		

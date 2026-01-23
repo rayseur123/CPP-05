@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:41:36 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/20 17:20:51 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/23 16:00:45 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,18 @@ RobotomyRequestForm const&	RobotomyRequestForm::operator=(RobotomyRequestForm co
 	{
 		return (*this);
 	}
-	target_ = form.target_;
-	isSigned_ = form.isSigned_;
+	setTarget(form.getTarget());
+	setIsSigned(form.getIsSigned());
 	return (*this);
 }
 
 void	RobotomyRequestForm::execute(Bureaucrat const& executor) const
 {
-	if (executor.getGrade() > execRequiredGrade_)
+	if (executor.getGrade() > getExecRequiredGrade())
 	{
 		throw GradeTooLowException();
 	}
-	if (isSigned_ == false)
+	if (getIsSigned() == false)
 	{
 		throw NotSignedException();
 	}

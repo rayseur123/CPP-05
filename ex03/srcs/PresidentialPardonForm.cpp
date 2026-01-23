@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:56:49 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/20 17:12:11 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/23 16:06:35 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,18 @@ PresidentialPardonForm const&	PresidentialPardonForm::operator=(PresidentialPard
 	{
 		return (*this);
 	}
-	target_ = form.target_;
-	isSigned_ = form.isSigned_;
+	setTarget(form.getTarget());
+	setIsSigned(form.getIsSigned());
 	return (*this);
 }
 
 void	PresidentialPardonForm::execute(Bureaucrat const& executor) const
 {
-	if (executor.getGrade() > execRequiredGrade_)
+	if (executor.getGrade() > getExecRequiredGrade())
 	{
 		throw GradeTooLowException();
 	}
-	if (isSigned_ == false)
+	if (getIsSigned() == false)
 	{
 		throw NotSignedException();
 	}

@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 14:52:26 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/20 17:12:06 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/23 15:59:30 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,26 +31,26 @@ ShrubberyCreationForm const&	ShrubberyCreationForm::operator=(ShrubberyCreationF
 	{
 		return (*this);
 	}
-	target_ = form.target_;
-	isSigned_ = form.isSigned_;
+	setTarget(form.getTarget());
+	setIsSigned(form.getIsSigned());
 	return (*this);
 }
 
 void	ShrubberyCreationForm::execute(Bureaucrat const& executor) const
 {
-	if (executor.getGrade() > execRequiredGrade_)
+	if (executor.getGrade() > getExecRequiredGrade())
 	{
 		throw GradeTooLowException();
 	}
-	if (isSigned_ == false)
+	if (getIsSigned() == false)
 	{
 		throw NotSignedException();
 	}
 	
-	std::ofstream	file_shrubbery((target_ + "_shrubbery").c_str());
-		if (file_shrubbery.is_open())
+	std::ofstream	file_shrubbery((getTarget() + "_shrubbery").c_str());
+	if (file_shrubbery.is_open())
 	{
 		file_shrubbery << TREE;
+		file_shrubbery.close();
 	}
-	file_shrubbery.close();
 }
