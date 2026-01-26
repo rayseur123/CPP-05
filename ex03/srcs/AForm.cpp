@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 12:32:32 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/23 16:12:23 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/26 15:46:59 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 #include <string>
 
 AForm::AForm()
-:	name_("default"), isSigned_(false), signRequiredGrade_(1), \
+:	name_("default"), isSigned_(false), signRequiredGrade_(1),
 	execRequiredGrade_(1), target_("default")
 {}
 
 AForm::AForm(AForm const& form)
-:	name_(form.name_), isSigned_(form.isSigned_), \
-	signRequiredGrade_(form.signRequiredGrade_), \
-	execRequiredGrade_(form.execRequiredGrade_),\
-	target_(form.target_) \
+:	name_(form.name_), isSigned_(form.isSigned_), 
+	signRequiredGrade_(form.signRequiredGrade_), 
+	execRequiredGrade_(form.execRequiredGrade_),
+	target_(form.target_)
 {}
 
-AForm::AForm(std::string const& name, int const& signRequiredGrade, \
-			int const& execRequiredGrade, std::string const& target)
+AForm::AForm(std::string const& name, int signRequiredGrade,
+			int execRequiredGrade, std::string const& target)
 :	name_(name), isSigned_(false), \
 	signRequiredGrade_(signRequiredGrade), \
 	execRequiredGrade_(execRequiredGrade), \
@@ -102,7 +102,7 @@ void	AForm::beSigned(Bureaucrat const& bureaucrat)
 
 const char* AForm::GradeTooHighException::what() const throw()
 {
-	return (GRADE_TOO_HIGHT);
+	return (GRADE_TOO_HIGH);
 }
 
 const char* AForm::GradeTooLowException::what() const throw()

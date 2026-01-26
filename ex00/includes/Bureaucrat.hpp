@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:00:11 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/20 11:51:37 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/26 15:38:57 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 #include <exception>
 
-#define GRADE_TOO_HIGHT "The grade is too hight"
+#define GRADE_TOO_HIGH "The grade is too high"
 #define GRADE_TOO_LOW "The grade is too low"
 
 class	Bureaucrat
@@ -25,7 +25,7 @@ class	Bureaucrat
 	public:
 		Bureaucrat();
 		Bureaucrat(Bureaucrat const& bureaucrat);
-		Bureaucrat(int const& grade, std::string const& name);
+		Bureaucrat(int grade, std::string const& name);
 
 		~Bureaucrat(){};
 

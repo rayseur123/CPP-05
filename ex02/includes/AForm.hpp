@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 12:01:11 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/23 15:59:09 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/26 15:44:16 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <string>
 #include "Bureaucrat.hpp"
 
-#define GRADE_TOO_HIGHT "The grade is too hight"
+#define GRADE_TOO_HIGH "The grade is too high"
 #define GRADE_TOO_LOW "The grade is too low"
 #define NOT_SIGNED "The form are not signed"
 
@@ -33,8 +33,8 @@ class	AForm
 	public:
 		AForm();
 		AForm(AForm const& form);
-		AForm(std::string const& name, int const& signRequiredGrade, \
-			int const& execRequiredGrade, std::string const& target);
+		AForm(std::string const& name, int signRequiredGrade,
+			int execRequiredGrade, std::string const& target);
 		virtual	~AForm(){};
 
 		AForm const&	operator=(AForm const& form);

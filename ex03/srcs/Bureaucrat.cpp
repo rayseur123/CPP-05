@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:13:36 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/22 10:07:53 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/26 15:47:09 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Bureaucrat::Bureaucrat()
 Bureaucrat::Bureaucrat(Bureaucrat const& bureaucrat)
 : grade_(bureaucrat.grade_), name_(bureaucrat.name_){}
 
-Bureaucrat::Bureaucrat(int const& grade, std::string const& name)
+Bureaucrat::Bureaucrat(int grade, std::string const& name)
 : grade_(grade), name_(name)
 {
 	if (grade_ < 1)
@@ -108,12 +108,12 @@ void	Bureaucrat::executeForm(AForm const& form) const
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return (GRADE_TOO_HIGHT);
+	return (GRADE_TOO_HIGH);
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return (GRADE_TOO_HIGHT);
+	return (GRADE_TOO_LOW);
 }
 
 std::ostream&	operator<<(std::ostream& os, Bureaucrat const& Bureaucrat)
