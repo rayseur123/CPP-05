@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 12:32:32 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/26 15:42:07 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/26 15:50:28 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ Form::Form(std::string const& name, int signRequiredGrade,
 		throw (GradeTooLowException());
 	}
 }
+
+Form::~Form(){}
 
 Form const&	Form::operator=(Form const& form)
 {

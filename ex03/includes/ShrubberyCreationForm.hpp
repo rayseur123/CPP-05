@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 14:36:45 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/20 16:21:12 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/26 15:57:17 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ class	ShrubberyCreationForm: public AForm
 		ShrubberyCreationForm();
 		ShrubberyCreationForm(std::string const& target);
 		ShrubberyCreationForm(ShrubberyCreationForm const& form);
-		~ShrubberyCreationForm(){};
+		~ShrubberyCreationForm();
 		
 		ShrubberyCreationForm const&	operator=(ShrubberyCreationForm const& form);
 		

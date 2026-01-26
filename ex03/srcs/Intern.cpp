@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 11:24:07 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/22 12:17:27 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/26 15:56:32 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+
+Intern::Intern(){}
+		
+Intern::Intern(Intern& intern){(void)intern;}
+		
+Intern::~Intern(){};
 
 Intern&	Intern::operator=(Intern const& intern)
 {

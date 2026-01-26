@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:41:36 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/23 16:00:45 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/26 15:52:21 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ RobotomyRequestForm::RobotomyRequestForm(std::string const& target)
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const& form)
 : AForm(form)
 {}
+
+RobotomyRequestForm::~RobotomyRequestForm(){}
 
 RobotomyRequestForm const&	RobotomyRequestForm::operator=(RobotomyRequestForm const& form)
 {

@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:13:36 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/26 15:47:09 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/26 15:53:42 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ Bureaucrat::Bureaucrat(int grade, std::string const& name)
 		throw (GradeTooLowException());
 	}
 }
+
+Bureaucrat::~Bureaucrat(){}
 
 Bureaucrat&	Bureaucrat::operator=(Bureaucrat const& bureaucrat)
 {

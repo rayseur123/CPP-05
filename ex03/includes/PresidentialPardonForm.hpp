@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:56:07 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/20 16:56:33 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/26 15:55:01 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class	PresidentialPardonForm: public AForm
 		PresidentialPardonForm();
 		PresidentialPardonForm(std::string const& target);
 		PresidentialPardonForm(PresidentialPardonForm const& form);
-		~PresidentialPardonForm(){};
+		~PresidentialPardonForm();
 		
 		PresidentialPardonForm const&	operator=(PresidentialPardonForm const& form);
 		

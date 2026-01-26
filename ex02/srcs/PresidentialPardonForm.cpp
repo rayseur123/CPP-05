@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:56:49 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/23 16:02:09 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/26 15:52:03 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ PresidentialPardonForm::PresidentialPardonForm(std::string const& target)
 PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const& form)
 : AForm(form)
 {}
+
+PresidentialPardonForm::~PresidentialPardonForm(){}
 
 PresidentialPardonForm const&	PresidentialPardonForm::operator=(PresidentialPardonForm const& form)
 {
