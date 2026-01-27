@@ -6,12 +6,12 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:37:49 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/26 15:56:43 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/27 15:31:28 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM
-#define ROBOTOMYREQUESTFORM
+#ifndef ROBOTOMYREQUESTFORM_HPP
+#define ROBOTOMYREQUESTFORM_HPP
 
 #include "AForm.hpp"
 
